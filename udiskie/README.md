@@ -72,6 +72,6 @@ Restart=always
 WantedBy=default.target
 ```  
   
-Run  
+Run:  
 `systemctl --user enable udiskie.service`  
 `systemctl --user start udiskie.service`  
