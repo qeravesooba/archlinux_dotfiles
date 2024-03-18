@@ -19,4 +19,12 @@ notify-send "Title" "Message"
 notify-send -u low "Title" "Message"
 notify-send -u normal "Title" "Message"
 notify-send -u critical "Title" "Message"
+```  
+   
 ```
+dunstify "Message"
+dunstify "Title" "Message"
+dunstify -u low "Title" "Message"
+dunstify -u normal "Title" "Message"
+dunstify -u critical "Title" "Message"
+```  
