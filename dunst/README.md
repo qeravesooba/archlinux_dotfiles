@@ -4,6 +4,7 @@ A lightweight notification daemon
   
 See https://wiki.archlinux.org/title/Dunst  
 See https://github.com/dunst-project/dunst  
+See https://github.com/dunst-project/dunst/wiki  
   
 Add command to autostart:  
 hyprland `~/.config/hypr/hyprland.conf`: `exec-once dunst`  
