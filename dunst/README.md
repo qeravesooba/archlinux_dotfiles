@@ -6,7 +6,7 @@ See https://wiki.archlinux.org/title/Dunst
 See https://github.com/dunst-project/dunst  
   
 Add command to autostart:  
-hyprland `~/.config/hypr/hyprland.conf`: `exec-once mako`  
+hyprland `~/.config/hypr/hyprland.conf`: `exec-once dunst`  
   
 Add config to ~/.config/dunst/dunstrc  
   
