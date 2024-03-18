@@ -1,10 +1,14 @@
+# Automounting  
+  
 Install necessary packages:  
 `sudo pacman -S ntfs-3g idisks2 udiskie`  
   
-udisks2
-https://wiki.archlinux.org/title/udisks  
+## udisks2  
+  
+See https://wiki.archlinux.org/title/udisks  
 By default, udisks2 mounts removable dribes to `/run/media/$USER`  
-If you wanna mount to `/media/`, create `/etc/udev/rules.d/99-udisks2.rules`:  
+If you wanna mount to `/media/`, create rule `/etc/udev/rules.d/99-udisks2.rules`:  
+  
 ```
 # UDISKS_FILESYSTEM_SHARED
 # ==1: mount filesystem to a shared directory (/media/VolumeName)
@@ -12,13 +16,18 @@ If you wanna mount to `/media/`, create `/etc/udev/rules.d/99-udisks2.rules`:
 # See udisks(8)
 ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
 ```  
+  
 Since `/media`, unlike `/run`, is not mounted by default as a tmpfs, you may also wish to create a `/etc/tmpfiles.d/media.conf` snippet to clean stale mountpoints at every boot: 
+  
 ```
 D /media 0755 root root 0 -
 ```  
-udiskie
-`https://github.com/coldfix/udiskie`  
-add to `/usr/lib/systemd/user/udiskie.service`:  
+  
+## udiskie  
+  
+See `https://github.com/coldfix/udiskie`  
+Create systemd unit `/usr/lib/systemd/user/udiskie.service`:  
+  
 ```
 [Unit]
 Description=udiskie daemon
@@ -30,4 +39,8 @@ Restart=always
 
 [Install]
 WantedBy=default.target
-```
+```  
+  
+Run  
+`systemctl --user enable udiskie.service`  
+`systemctl --user start udiskie.service`  
