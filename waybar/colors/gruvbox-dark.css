@@ -1,0 +1,22 @@
+@define-color red      #cc241d;
+@define-color red-h    #fb4934;
+
+@define-color green    #98971a;
+@define-color green-h  #b8bb26;
+
+@define-color yellow   #d79921;
+@define-color yellow-h #fabd2f;
+
+@define-color blue     #458588;
+@define-color blue-h   #83a598;
+
+@define-color purple   #b16286;
+@define-color purple-h #d3869b;
+
+@define-color aqua     #689d6a;
+@define-color aqua-h   #8ec07c;
+
+@define-color orange   #d65d0e;
+@define-color orange-h #fe8019;
+
+@define-color background #282828;

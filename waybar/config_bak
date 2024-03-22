@@ -1,0 +1,46 @@
+{
+    "layer": "top",
+    "height": 30,
+    "modules-right": ["network", "wireplumber", "backlight", "cpu", "memory", "battery"],
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "states": {
+            "warning":  40,
+            "critical": 15
+        },
+        "interval": 60,
+        "max-length": 25
+    },
+
+    "cpu": {
+        "format": " {usage}%"
+    },
+
+    "memory": {
+        "format": "󰍛 {}%"
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+		    "format-muted": "󰝟",
+		    "on-clink": "sleep 0.1 && helvum",
+		    "format-icons": ["","", ""]
+    }
+}

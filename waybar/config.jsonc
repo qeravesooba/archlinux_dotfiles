@@ -1,0 +1,41 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+
+  "modules-right": [
+    "network",
+    "battery",
+    "clock"
+  ],
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "format-icons": ["", "", "", ""]
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%"
+  },
+
+  "clock": {
+    "format": " {:%H:%M} "
+  },
+
+  "cpu": {
+  },
+
+  "memory": {
+  },
+
+  "network": {
+    "format-wifi": " {essid}",
+  },
+
+  "pulseaudio": {
+  }
+}

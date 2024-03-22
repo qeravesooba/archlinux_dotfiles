@@ -1,0 +1,20 @@
+@import "colors/gruvbox-dark.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#waybar {
+    background: @background;
+    color: #ebdbb2;
+}
+
+#battery,
+#cpu,
+#memory {
+    padding: 0 5px;
+}
