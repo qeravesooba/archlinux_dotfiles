@@ -83,7 +83,7 @@ echo "root:${ROOT_PASSWORD}" | arch-chroot /mnt chpasswd
 sed -i "s/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/" /mnt/etc/sudoers
 
 arch-chroot /mnt pacman --noconfirm -Sy archlinux-keyring
-arch-chroot /mnt pacman --noconfirm -S linux linux-firmware linux-headers intel-ucode btrfs-progs efibootmgr zsh networkmanager neovim git openssh openssl openvpn
+arch-chroot /mnt pacman --noconfirm -S linux linux-firmware linux-headers intel-ucode btrfs-progs efibootmgr zsh networkmanager neovim git openssh openssl openvpn reflector
 
 arch-chroot /mnt systemctl enable NetworkManager.service
 
