@@ -1,0 +1,1 @@
+See https://wiki.hyprland.org/
