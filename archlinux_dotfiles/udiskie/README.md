@@ -5,9 +5,9 @@ Install necessary packages:
 
 ## udisks2
 
-See https://wiki.archlinux.org/title/udisks
-By default, udisks2 mounts removable drives to `/run/media/$USER`
-If you wanna mount to `/media/`, create rule `/etc/udev/rules.d/99-udisks2.rules`:
+See https://wiki.archlinux.org/title/udisks  
+By default, udisks2 mounts removable drives to `/run/media/$USER`  
+If you wanna mount to `/media/`, create rule `/etc/udev/rules.d/99-udisks2.rules`:  
 
 ```
 # UDISKS_FILESYSTEM_SHARED
